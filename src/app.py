@@ -583,10 +583,8 @@ if saved_path is not None and saved_path.exists():
 
                 # after histograms, render correlation heatmap if available
                 correlations = None
-                if summary_data is not None and isinstance(summary_data.get("eda"), dict):
-                    correlations = summary_data["eda"].get("correlations")
-                if correlations is None and "eda_output" in globals():
-                    correlations = globals().get("eda_output", {}).get("correlations")
+                if st.session_state.eda_output and isinstance(st.session_state.eda_output, dict):
+                    correlations = st.session_state.eda_output.get("correlations")
 
                 if correlations:
                     corr_df = pd.DataFrame(correlations)

@@ -48,9 +48,9 @@ def _generate_llm_summary(data: Dict[str, Any]) -> str:
         # The Ollama SDK returns a dict with a 'response' key containing the text.
         response_text = response.get("response", "")
         # Extract token counts: prefer eval_count, else sum of prompt_eval_count + eval_count
-        total_tokens = response.get('eval_count')
-        if not total_tokens:
-            total_tokens = response.get('prompt_eval_count', 0) + response.get('eval_count', 0)
+        prompt_tokens = response.get('prompt_eval_count', 0) or 0
+        completion_tokens = response.get('eval_count', 0) or 0
+        total_tokens = prompt_tokens + completion_tokens
         is_fallback = not response_text or not response_text.strip()
         LLM_CALL_LOG.append({
             'agent': 'EDAAnalyzerAgent',

@@ -103,9 +103,9 @@ def _generate_summary_via_llm(prompt: str) -> str:
         response = ollama.generate(model="gpt-oss:20b-cloud", prompt=prompt)
         summary_text = response.get("response", "")
         # Token accounting
-        total_tokens = response.get('eval_count')
-        if not total_tokens:
-            total_tokens = response.get('prompt_eval_count', 0) + response.get('eval_count', 0)
+        prompt_tokens = response.get('prompt_eval_count', 0) or 0
+        completion_tokens = response.get('eval_count', 0) or 0
+        total_tokens = prompt_tokens + completion_tokens
         is_fallback = not summary_text or not summary_text.strip()
         LLM_CALL_LOG.append({
             'agent': 'SummaryAgent',
