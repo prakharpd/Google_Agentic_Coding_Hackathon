@@ -1,0 +1,10 @@
+google-adk
+pandas
+matplotlib
+plotly
+streamlit
+seaborn
+ydata-profiling
+chardet
+scipy
+ollama

@@ -1,0 +1,133 @@
+{
+  "security": {
+    "status": "PASSED",
+    "reason": "No issues detected",
+    "rows": 10,
+    "cols": 5
+  },
+  "csv_reader": {
+    "shape": [
+      10,
+      5
+    ],
+    "columns": [
+      "col1",
+      "col2",
+      "col3",
+      "col4",
+      "col5"
+    ],
+    "dtypes": {
+      "col1": "float64",
+      "col2": "float64",
+      "col3": "float64",
+      "col4": "float64",
+      "col5": "float64"
+    },
+    "null_counts": {
+      "col1": 0,
+      "col2": 0,
+      "col3": 0,
+      "col4": 0,
+      "col5": 0
+    },
+    "profile_path": "outputs\\profile.html"
+  },
+  "eda": {
+    "stats": {
+      "col1": {
+        "mean": 0.5604438197710921,
+        "median": 0.6287782592016999,
+        "std": 0.24687646752190476,
+        "skew": -0.4090792764496455,
+        "kurtosis": 0.0950527453160932
+      },
+      "col2": {
+        "mean": 0.4678145671266227,
+        "median": 0.48324106550766954,
+        "std": 0.25752157772192835,
+        "skew": -0.39877331047166903,
+        "kurtosis": -1.0964021635045178
+      },
+      "col3": {
+        "mean": 0.6200990885471616,
+        "median": 0.6098486864731956,
+        "std": 0.22948614976508128,
+        "skew": -0.6155311131011726,
+        "kurtosis": 0.64439572360999
+      },
+      "col4": {
+        "mean": 0.6402512679674864,
+        "median": 0.673295349909249,
+        "std": 0.28054144248762397,
+        "skew": -0.7621667063043098,
+        "kurtosis": -0.017532309876602703
+      },
+      "col5": {
+        "mean": 0.401216847639697,
+        "median": 0.39905172940815,
+        "std": 0.26584905070575227,
+        "skew": 0.18444703233690438,
+        "kurtosis": -0.8299236175121445
+      }
+    },
+    "nulls": {
+      "col1": 0,
+      "col2": 0,
+      "col3": 0,
+      "col4": 0,
+      "col5": 0
+    },
+    "correlations": {
+      "col1": {
+        "col1": 1.0,
+        "col2": 0.3597214912217507,
+        "col3": -0.26673995881307505,
+        "col4": 0.2859975761906899,
+        "col5": -0.526528397068082
+      },
+      "col2": {
+        "col1": 0.3597214912217507,
+        "col2": 1.0,
+        "col3": -0.3304838899475509,
+        "col4": 0.18062045466347995,
+        "col5": -0.5802362417943991
+      },
+      "col3": {
+        "col1": -0.26673995881307505,
+        "col2": -0.3304838899475509,
+        "col3": 1.0,
+        "col4": 0.26199979579076094,
+        "col5": 0.4288948990138736
+      },
+      "col4": {
+        "col1": 0.2859975761906899,
+        "col2": 0.18062045466347995,
+        "col3": 0.26199979579076094,
+        "col4": 1.0,
+        "col5": -0.14474472196230082
+      },
+      "col5": {
+        "col1": -0.526528397068082,
+        "col2": -0.5802362417943991,
+        "col3": 0.4288948990138736,
+        "col4": -0.14474472196230082,
+        "col5": 1.0
+      }
+    },
+    "outliers": {},
+    "llm_summary": "Across the five variables the dataset displays a largely symmetrical spread with a few mild left\u2011skewness (col1, col2, col3, col4) and a slight right\u2011skew in col5. Their means fall between 0.40 and 0.64, with the highest average in col4 (0.64) and the lowest in col5 (0.40). All five columns have standard deviations closer to 0.23\u20130.28, indicating moderate spread; col4 has the largest (0.28) while col3 is the tightest (0.23). No missing values were observed in any column, so the observations are complete. Correlation analysis shows the strongest positive link between col1 and col5 is actually negative (\u22120.53), while the largest positive association is between col1\u2013col2 (0.36) and col3\u2013col4 (0.26). The most pronounced negative pairings involve col5 with both col1 (\u22120.53) and col2 (\u22120.58), suggesting col5 behaves inversely with those variables. Col3 has a moderate positive relationship with col5 (0.43) and modest links with the other columns. No outliers were flagged, indicating no extreme deviations beyond the dataset\u2019s variance limits."
+  },
+  "charts": {
+    "charts": [
+      "outputs\\charts\\col1_histogram.png",
+      "outputs\\charts\\col2_histogram.png",
+      "outputs\\charts\\col3_histogram.png",
+      "outputs\\charts\\col4_histogram.png",
+      "outputs\\charts\\col5_histogram.png"
+    ]
+  },
+  "validation": {
+    "status": "PASS"
+  }
+}

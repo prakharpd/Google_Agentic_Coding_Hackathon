@@ -1,0 +1,6 @@
+{
+  "chat.agent.model": "gpt-oss:120b-cloud",
+  "ollama.baseUrl": "http://localhost:11434",
+  "python.defaultInterpreterPath": ".venv/bin/python",
+  "editor.formatOnSave": true
+}

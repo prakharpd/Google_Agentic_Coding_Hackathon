@@ -1,0 +1,11 @@
+{
+  "pipeline_duration_sec": 44.829533,
+  "slowest_agent": "SummaryAgent",
+  "slowest_agent_sec": 18.0,
+  "llm_accuracy_score": 75.0,
+  "llm_fallback_rate": 0.0,
+  "chart_validation_retries": 0,
+  "security_status": "PASSED",
+  "security_scan_time_sec": 0.0,
+  "total_llm_tokens": 1801
+}
