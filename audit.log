@@ -2667,3 +2667,180 @@ The generated histograms for columns `col1` through `col5` all use 11 bins, wher
 2026-06-27T03:04:23+0530 | INFO | SummaryAgent completed and wrote report to outputs\summary.md
 2026-06-27T03:04:23+0530 | INFO | Starting security validation for D:\google\business-analyst-agent\data\uploads\sample.csv
 2026-06-27T03:04:23+0530 | INFO | Security validation PASSED for D:\google\business-analyst-agent\data\uploads\sample.csv – rows=10, cols=5
+2026-06-27T13:11:06+0530 | INFO | Loaded skill: SecurityValidatorAgent [read-only]
+2026-06-27T13:11:06+0530 | INFO | Running SecurityValidatorAgent on D:\google\business-analyst-agent\data\sample_large.csv
+2026-06-27T13:11:06+0530 | INFO | Starting security validation for D:\google\business-analyst-agent\data\sample_large.csv
+2026-06-27T13:11:06+0530 | INFO | Security validation PASSED for D:\google\business-analyst-agent\data\sample_large.csv – rows=1000, cols=5
+2026-06-27T13:11:06+0530 | INFO | Security validation PASSED
+2026-06-27T13:11:06+0530 | INFO | Loaded skill: CSVReaderAgent [read-only]
+2026-06-27T13:11:06+0530 | INFO | Running CSVReaderAgent
+2026-06-27T13:11:06+0530 | INFO | CSVReaderAgent: loading D:\google\business-analyst-agent\data\sample_large.csv
+2026-06-27T13:11:06+0530 | INFO | Detected encoding: ascii
+2026-06-27T13:11:13+0530 | INFO | Profiling report written to outputs\profile.html
+2026-06-27T13:11:13+0530 | INFO | Loaded skill: EDAAnalyzerAgent [read-only]
+2026-06-27T13:11:13+0530 | INFO | Running EDAAnalyzerAgent
+2026-06-27T13:11:13+0530 | INFO | EDAAnalyzerAgent: starting analysis
+2026-06-27T13:11:24+0530 | INFO | EDAAnalyzerAgent: analysis complete
+2026-06-27T13:11:24+0530 | INFO | Loaded skill: ChartGeneratorAgent [draft-only]
+2026-06-27T13:11:24+0530 | INFO | Running ChartGeneratorAgent
+2026-06-27T13:11:24+0530 | INFO | ChartGeneratorAgent: starting chart generation
+2026-06-27T13:11:27+0530 | ERROR | LLM chart type decision failed: Expecting value: line 1 column 1 (char 0)
+2026-06-27T13:11:29+0530 | INFO | ChartGeneratorAgent: chart generation complete
+2026-06-27T13:11:29+0530 | INFO | Loaded skill: ChartValidatorAgent [read-only]
+2026-06-27T13:11:29+0530 | INFO | Running ChartValidatorAgent
+2026-06-27T13:11:29+0530 | INFO | Chart validation attempt 1
+2026-06-27T13:11:29+0530 | INFO | All chart checks passed
+2026-06-27T13:11:29+0530 | INFO | Chart validation PASSED
+2026-06-27T13:11:29+0530 | INFO | Loaded skill: SummaryAgent [draft-only]
+2026-06-27T13:11:29+0530 | INFO | Running SummaryAgent
+2026-06-27T13:11:29+0530 | INFO | SummaryAgent: loaded CSV fresh from disk
+2026-06-27T13:11:29+0530 | INFO | SummaryAgent: extracted dataset overview from CSV
+2026-06-27T13:11:29+0530 | INFO | SummaryAgent: found 5 chart(s)
+2026-06-27T13:11:50+0530 | INFO | SummaryAgent: generated summary via gpt-oss:20b-cloud
+2026-06-27T13:11:50+0530 | INFO | SummaryAgent completed and wrote report to outputs\summary.md
+2026-06-27T13:11:50+0530 | INFO | Pipeline complete – summary written to outputs\summary.json
+2026-06-27T13:11:50+0530 | INFO | Running EvalAgent
+2026-06-27T13:11:50.398380 - EvalAgent - START
+2026-06-27T13:11:50.412704 - EvalAgent - COMPLETED
+2026-06-27T13:17:30+0530 | INFO | Loaded skill: SecurityValidatorAgent [read-only]
+2026-06-27T13:17:30+0530 | INFO | Running SecurityValidatorAgent on D:\google\business-analyst-agent\data\sample_large.csv
+2026-06-27T13:17:30+0530 | INFO | Starting security validation for D:\google\business-analyst-agent\data\sample_large.csv
+2026-06-27T13:17:30+0530 | INFO | Security validation PASSED for D:\google\business-analyst-agent\data\sample_large.csv – rows=1000, cols=5
+2026-06-27T13:17:30+0530 | INFO | Security validation PASSED
+2026-06-27T13:17:30+0530 | INFO | Loaded skill: CSVReaderAgent [read-only]
+2026-06-27T13:17:30+0530 | INFO | Running CSVReaderAgent
+2026-06-27T13:17:30+0530 | INFO | CSVReaderAgent: loading D:\google\business-analyst-agent\data\sample_large.csv
+2026-06-27T13:17:30+0530 | INFO | Detected encoding: ascii
+2026-06-27T13:17:36+0530 | INFO | Profiling report written to outputs\profile.html
+2026-06-27T13:17:36+0530 | INFO | Loaded skill: EDAAnalyzerAgent [read-only]
+2026-06-27T13:17:36+0530 | INFO | Running EDAAnalyzerAgent
+2026-06-27T13:17:36+0530 | INFO | EDAAnalyzerAgent: starting analysis
+2026-06-27T13:17:39+0530 | INFO | EDAAnalyzerAgent: analysis complete
+2026-06-27T13:17:39+0530 | INFO | Loaded skill: ChartGeneratorAgent [draft-only]
+2026-06-27T13:17:39+0530 | INFO | Running ChartGeneratorAgent
+2026-06-27T13:17:39+0530 | INFO | ChartGeneratorAgent: starting chart generation
+2026-06-27T13:17:45+0530 | ERROR | LLM chart type decision failed: Expecting value: line 1 column 1 (char 0)
+2026-06-27T13:17:46+0530 | INFO | ChartGeneratorAgent: chart generation complete
+2026-06-27T13:17:46+0530 | INFO | Loaded skill: ChartValidatorAgent [read-only]
+2026-06-27T13:17:46+0530 | INFO | Running ChartValidatorAgent
+2026-06-27T13:17:46+0530 | INFO | Chart validation attempt 1
+2026-06-27T13:17:46+0530 | INFO | All chart checks passed
+2026-06-27T13:17:46+0530 | INFO | Chart validation PASSED
+2026-06-27T13:17:46+0530 | INFO | Loaded skill: SummaryAgent [draft-only]
+2026-06-27T13:17:46+0530 | INFO | Running SummaryAgent
+2026-06-27T13:17:46+0530 | INFO | SummaryAgent: loaded CSV fresh from disk
+2026-06-27T13:17:46+0530 | INFO | SummaryAgent: extracted dataset overview from CSV
+2026-06-27T13:17:46+0530 | INFO | SummaryAgent: found 5 chart(s)
+2026-06-27T13:18:23+0530 | INFO | SummaryAgent: generated summary via gpt-oss:20b-cloud
+2026-06-27T13:18:23+0530 | INFO | SummaryAgent completed and wrote report to outputs\summary.md
+2026-06-27T13:18:23+0530 | INFO | Pipeline complete – summary written to outputs\summary.json
+2026-06-27T13:18:23+0530 | INFO | Running EvalAgent
+2026-06-27T13:18:23.310508 - EvalAgent - START
+2026-06-27T13:18:23.323971 - EvalAgent - COMPLETED
+2026-06-27T13:21:40+0530 | INFO | Loaded skill: SecurityValidatorAgent [read-only]
+2026-06-27T13:21:40+0530 | INFO | Running SecurityValidatorAgent on D:\google\business-analyst-agent\data\sample_large.csv
+2026-06-27T13:21:40+0530 | INFO | Starting security validation for D:\google\business-analyst-agent\data\sample_large.csv
+2026-06-27T13:21:40+0530 | INFO | Security validation PASSED for D:\google\business-analyst-agent\data\sample_large.csv – rows=1000, cols=5
+2026-06-27T13:21:40+0530 | INFO | Security validation PASSED
+2026-06-27T13:21:40+0530 | INFO | Loaded skill: CSVReaderAgent [read-only]
+2026-06-27T13:21:40+0530 | INFO | Running CSVReaderAgent
+2026-06-27T13:21:40+0530 | INFO | CSVReaderAgent: loading D:\google\business-analyst-agent\data\sample_large.csv
+2026-06-27T13:21:40+0530 | INFO | Detected encoding: ascii
+2026-06-27T13:21:46+0530 | INFO | Profiling report written to outputs\profile.html
+2026-06-27T13:21:46+0530 | INFO | Loaded skill: EDAAnalyzerAgent [read-only]
+2026-06-27T13:21:46+0530 | INFO | Running EDAAnalyzerAgent
+2026-06-27T13:21:46+0530 | INFO | EDAAnalyzerAgent: starting analysis
+2026-06-27T13:21:56+0530 | INFO | EDAAnalyzerAgent: analysis complete
+2026-06-27T13:21:56+0530 | INFO | Loaded skill: ChartGeneratorAgent [draft-only]
+2026-06-27T13:21:56+0530 | INFO | Running ChartGeneratorAgent
+2026-06-27T13:21:56+0530 | INFO | ChartGeneratorAgent: starting chart generation
+2026-06-27T13:22:04+0530 | ERROR | LLM chart type decision failed: Expecting value: line 1 column 1 (char 0)
+2026-06-27T13:22:05+0530 | INFO | ChartGeneratorAgent: chart generation complete
+2026-06-27T13:22:05+0530 | INFO | Loaded skill: ChartValidatorAgent [read-only]
+2026-06-27T13:22:05+0530 | INFO | Running ChartValidatorAgent
+2026-06-27T13:22:05+0530 | INFO | Chart validation attempt 1
+2026-06-27T13:22:06+0530 | INFO | All chart checks passed
+2026-06-27T13:22:06+0530 | INFO | Chart validation PASSED
+2026-06-27T13:22:06+0530 | INFO | Loaded skill: SummaryAgent [draft-only]
+2026-06-27T13:22:06+0530 | INFO | Running SummaryAgent
+2026-06-27T13:22:06+0530 | INFO | SummaryAgent: loaded CSV fresh from disk
+2026-06-27T13:22:06+0530 | INFO | SummaryAgent: extracted dataset overview from CSV
+2026-06-27T13:22:06+0530 | INFO | SummaryAgent: found 5 chart(s)
+2026-06-27T13:22:42+0530 | INFO | SummaryAgent: generated summary via gpt-oss:20b-cloud
+2026-06-27T13:22:42+0530 | INFO | SummaryAgent completed and wrote report to outputs\summary.md
+2026-06-27T13:22:42+0530 | INFO | Pipeline complete – summary written to outputs\summary.json
+2026-06-27T13:22:42+0530 | INFO | Running EvalAgent
+2026-06-27T13:22:42.871307 - EvalAgent - START
+2026-06-27T13:22:42.885136 - EvalAgent - COMPLETED
+2026-06-27T13:25:17+0530 | INFO | Starting security validation for D:\google\business-analyst-agent\data\uploads\eda_patterns_2000.csv
+2026-06-27T13:25:17+0530 | INFO | Security validation PASSED for D:\google\business-analyst-agent\data\uploads\eda_patterns_2000.csv – rows=2000, cols=5
+2026-06-27T13:25:19+0530 | INFO | Starting security validation for D:\google\business-analyst-agent\data\uploads\eda_patterns_2000.csv
+2026-06-27T13:25:19+0530 | INFO | Security validation PASSED for D:\google\business-analyst-agent\data\uploads\eda_patterns_2000.csv – rows=2000, cols=5
+2026-06-27T13:25:19+0530 | INFO | Starting security validation for D:\google\business-analyst-agent\data\uploads\eda_patterns_2000.csv
+2026-06-27T13:25:19+0530 | INFO | Security validation PASSED for D:\google\business-analyst-agent\data\uploads\eda_patterns_2000.csv – rows=2000, cols=5
+2026-06-27T13:25:19+0530 | INFO | CSVReaderAgent: loading D:\google\business-analyst-agent\data\uploads\eda_patterns_2000.csv
+2026-06-27T13:25:20+0530 | INFO | Detected encoding: ascii
+2026-06-27T13:25:24+0530 | INFO | Profiling report written to outputs\profile.html
+2026-06-27T13:25:24+0530 | INFO | EDAAnalyzerAgent: starting analysis
+2026-06-27T13:25:38+0530 | INFO | EDAAnalyzerAgent: analysis complete
+2026-06-27T13:25:38+0530 | INFO | ChartGeneratorAgent: starting chart generation
+2026-06-27T13:25:42+0530 | ERROR | LLM chart type decision failed: Expecting value: line 1 column 1 (char 0)
+2026-06-27T13:25:43+0530 | INFO | ChartGeneratorAgent: chart generation complete
+2026-06-27T13:25:43+0530 | INFO | Chart validation attempt 1
+2026-06-27T13:25:43+0530 | INFO | All chart checks passed
+2026-06-27T13:25:43+0530 | INFO | SummaryAgent: loaded CSV fresh from disk
+2026-06-27T13:25:43+0530 | INFO | SummaryAgent: extracted dataset overview from CSV
+2026-06-27T13:25:43+0530 | INFO | SummaryAgent: found 5 chart(s)
+2026-06-27T13:26:25+0530 | INFO | SummaryAgent: generated summary via gpt-oss:20b-cloud
+2026-06-27T13:26:25+0530 | INFO | SummaryAgent completed and wrote report to outputs\summary.md
+2026-06-27T13:26:25+0530 | INFO | Starting security validation for D:\google\business-analyst-agent\data\uploads\eda_patterns_2000.csv
+2026-06-27T13:26:25+0530 | INFO | Security validation PASSED for D:\google\business-analyst-agent\data\uploads\eda_patterns_2000.csv – rows=2000, cols=5
+2026-06-27T13:28:08+0530 | INFO | Starting security validation for D:\google\business-analyst-agent\data\uploads\sample.csv
+2026-06-27T13:28:09+0530 | INFO | Security validation PASSED for D:\google\business-analyst-agent\data\uploads\sample.csv – rows=10, cols=5
+2026-06-27T13:28:11+0530 | INFO | Starting security validation for D:\google\business-analyst-agent\data\uploads\sample.csv
+2026-06-27T13:28:11+0530 | INFO | Security validation PASSED for D:\google\business-analyst-agent\data\uploads\sample.csv – rows=10, cols=5
+2026-06-27T13:28:11+0530 | INFO | Starting security validation for D:\google\business-analyst-agent\data\uploads\sample.csv
+2026-06-27T13:28:11+0530 | INFO | Security validation PASSED for D:\google\business-analyst-agent\data\uploads\sample.csv – rows=10, cols=5
+2026-06-27T13:28:11+0530 | INFO | CSVReaderAgent: loading D:\google\business-analyst-agent\data\uploads\sample.csv
+2026-06-27T13:28:11+0530 | INFO | Detected encoding: ascii
+2026-06-27T13:28:13+0530 | INFO | Profiling report written to outputs\profile.html
+2026-06-27T13:28:13+0530 | INFO | EDAAnalyzerAgent: starting analysis
+2026-06-27T13:28:18+0530 | INFO | EDAAnalyzerAgent: analysis complete
+2026-06-27T13:28:18+0530 | INFO | ChartGeneratorAgent: starting chart generation
+2026-06-27T13:28:28+0530 | ERROR | LLM chart type decision failed: Expecting value: line 1 column 1 (char 0)
+2026-06-27T13:28:29+0530 | INFO | ChartGeneratorAgent: chart generation complete
+2026-06-27T13:28:29+0530 | INFO | Chart validation attempt 1
+2026-06-27T13:28:29+0530 | INFO | All chart checks passed
+2026-06-27T13:28:29+0530 | INFO | SummaryAgent: loaded CSV fresh from disk
+2026-06-27T13:28:29+0530 | INFO | SummaryAgent: extracted dataset overview from CSV
+2026-06-27T13:28:29+0530 | INFO | SummaryAgent: found 5 chart(s)
+2026-06-27T13:28:53+0530 | INFO | SummaryAgent: generated summary via gpt-oss:20b-cloud
+2026-06-27T13:28:53+0530 | INFO | SummaryAgent completed and wrote report to outputs\summary.md
+2026-06-27T13:28:54+0530 | INFO | Starting security validation for D:\google\business-analyst-agent\data\uploads\sample.csv
+2026-06-27T13:28:54+0530 | INFO | Security validation PASSED for D:\google\business-analyst-agent\data\uploads\sample.csv – rows=10, cols=5
+2026-06-27T13:37:36+0530 | INFO | Starting security validation for D:\google\business-analyst-agent\data\uploads\blocked_sample.csv
+2026-06-27T13:37:36+0530 | ERROR | Security validation BLOCKED for D:\google\business-analyst-agent\data\uploads\blocked_sample.csv – reason: Header column 'ignore previous instructions' contains a blocked pattern
+2026-06-27T13:37:38+0530 | INFO | Starting security validation for D:\google\business-analyst-agent\data\uploads\blocked_sample.csv
+2026-06-27T13:37:38+0530 | ERROR | Security validation BLOCKED for D:\google\business-analyst-agent\data\uploads\blocked_sample.csv – reason: Header column 'ignore previous instructions' contains a blocked pattern
+2026-06-27T13:37:45+0530 | INFO | Starting security validation for D:\google\business-analyst-agent\data\uploads\sample_large.csv
+2026-06-27T13:37:45+0530 | INFO | Security validation PASSED for D:\google\business-analyst-agent\data\uploads\sample_large.csv – rows=1000, cols=5
+2026-06-27T13:37:46+0530 | INFO | Starting security validation for D:\google\business-analyst-agent\data\uploads\sample_large.csv
+2026-06-27T13:37:46+0530 | INFO | Security validation PASSED for D:\google\business-analyst-agent\data\uploads\sample_large.csv – rows=1000, cols=5
+2026-06-27T13:37:46+0530 | INFO | Starting security validation for D:\google\business-analyst-agent\data\uploads\sample_large.csv
+2026-06-27T13:37:46+0530 | INFO | Security validation PASSED for D:\google\business-analyst-agent\data\uploads\sample_large.csv – rows=1000, cols=5
+2026-06-27T13:37:46+0530 | INFO | CSVReaderAgent: loading D:\google\business-analyst-agent\data\uploads\sample_large.csv
+2026-06-27T13:37:46+0530 | INFO | Detected encoding: ascii
+2026-06-27T13:37:50+0530 | INFO | Profiling report written to outputs\profile.html
+2026-06-27T13:37:50+0530 | INFO | EDAAnalyzerAgent: starting analysis
+2026-06-27T13:38:07+0530 | INFO | EDAAnalyzerAgent: analysis complete
+2026-06-27T13:38:07+0530 | INFO | ChartGeneratorAgent: starting chart generation
+2026-06-27T13:38:13+0530 | INFO | ChartGeneratorAgent: chart generation complete
+2026-06-27T13:38:13+0530 | INFO | Chart validation attempt 1
+2026-06-27T13:38:13+0530 | INFO | All chart checks passed
+2026-06-27T13:38:13+0530 | INFO | SummaryAgent: loaded CSV fresh from disk
+2026-06-27T13:38:13+0530 | INFO | SummaryAgent: extracted dataset overview from CSV
+2026-06-27T13:38:13+0530 | INFO | SummaryAgent: found 5 chart(s)
+2026-06-27T13:38:40+0530 | INFO | SummaryAgent: generated summary via gpt-oss:20b-cloud
+2026-06-27T13:38:40+0530 | INFO | SummaryAgent completed and wrote report to outputs\summary.md
+2026-06-27T13:38:40+0530 | INFO | Starting security validation for D:\google\business-analyst-agent\data\uploads\sample_large.csv
+2026-06-27T13:38:40+0530 | INFO | Security validation PASSED for D:\google\business-analyst-agent\data\uploads\sample_large.csv – rows=1000, cols=5

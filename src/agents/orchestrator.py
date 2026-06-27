@@ -62,6 +62,44 @@ def write_pipeline_status(agent_name: str, status: str) -> None:
     status_file.write_text(json.dumps(pipeline_status, indent=2))
 
 
+def skill_loader(skill_md: Path) -> dict:
+    """Load YAML frontmatter from a SKILL.md file and log the loaded skill.
+
+    The function attempts to read the frontmatter block (between `---` markers),
+    parse simple `key: value` pairs for `name` and `tier`, and write an audit
+    log entry such as: "Loaded skill: SecurityValidatorAgent [read-only]".
+    Returns the parsed mapping (possibly empty on error).
+    """
+    try:
+        text = skill_md.read_text(encoding="utf-8")
+    except Exception as exc:
+        log_error(f"Failed to read skill file {skill_md}: {exc}")
+        return {}
+
+    lines = text.splitlines()
+    if not lines or lines[0].strip() != "---":
+        log_info(f"Loaded skill: {skill_md.stem} [unknown]")
+        return {}
+
+    front_lines = []
+    for line in lines[1:]:
+        if line.strip() == "---":
+            break
+        front_lines.append(line)
+
+    parsed: dict = {}
+    for line in front_lines:
+        if ":" not in line:
+            continue
+        key, val = line.split(":", 1)
+        parsed[key.strip()] = val.strip().strip("'\"")
+
+    name = parsed.get("name") or skill_md.parent.name
+    tier = parsed.get("tier") or "unknown"
+    log_info(f"Loaded skill: {name} [{tier}]")
+    return parsed
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Run the Business Analyst Agent pipeline")
     parser.add_argument("--input", required=True, help="Path to the CSV file to analyse")
@@ -78,6 +116,7 @@ def main() -> None:
     # ---------------------------------------------------------------------
     # 1. Security validation
     # ---------------------------------------------------------------------
+    skill_loader(Path("docs/agents/skills/security_validator/SKILL.md"))
     log_info(f"Running SecurityValidatorAgent on {csv_path}")
     write_pipeline_status("Security", "running")
     security_result = security_agent(str(csv_path))
@@ -93,6 +132,7 @@ def main() -> None:
     # ---------------------------------------------------------------------
     # 2. CSV reading / profiling
     # ---------------------------------------------------------------------
+    skill_loader(Path("docs/agents/skills/csv_reader/SKILL.md"))
     log_info("Running CSVReaderAgent")
     write_pipeline_status("CSVReader", "running")
     csv_reader_output = csv_reader_agent(str(csv_path))
@@ -111,6 +151,7 @@ def main() -> None:
     # ---------------------------------------------------------------------
     # 3. EDA analysis
     # ---------------------------------------------------------------------
+    skill_loader(Path("docs/agents/skills/eda_analyzer/SKILL.md"))
     log_info("Running EDAAnalyzerAgent")
     write_pipeline_status("EDA", "running")
     eda_output = eda_agent(df)
@@ -119,6 +160,7 @@ def main() -> None:
     # ---------------------------------------------------------------------
     # 4. Chart generation
     # ---------------------------------------------------------------------
+    skill_loader(Path("docs/agents/skills/chart_generator/SKILL.md"))
     log_info("Running ChartGeneratorAgent")
     write_pipeline_status("ChartGenerator", "running")
     chart_output = chart_agent(eda_output, df)
@@ -127,6 +169,7 @@ def main() -> None:
     # ---------------------------------------------------------------------
     # 5. Chart validation
     # ---------------------------------------------------------------------
+    skill_loader(Path("docs/agents/skills/chart_validator/SKILL.md"))
     log_info("Running ChartValidatorAgent")
     write_pipeline_status("ChartValidator", "running")
     validation_result = chart_validator_agent(str(csv_path), eda_output, df)
@@ -140,6 +183,7 @@ def main() -> None:
     # ---------------------------------------------------------------------
     # 6. Summary generation
     # ---------------------------------------------------------------------
+    skill_loader(Path("docs/agents/skills/summary/SKILL.md"))
     log_info("Running SummaryAgent")
     write_pipeline_status("Summary", "running")
     summary_agent(eda_output, str(csv_path))

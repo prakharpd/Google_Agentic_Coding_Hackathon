@@ -151,7 +151,7 @@ def _compute_llm_accuracy(ground_truth):
         # | **col1** | 0.5028 | 0.1465 | 0.0978 | -0.0084 |
         # or
         # | `col1` | 0.5028 | 0.1465 | 0.0978 | -0.0084 |
-        table_pattern = r"\|\s*[`*]{0,2}(col\w+)[`*]{0,2}\s*\|\s*([\d.]+)\s*\|\s*([\d.]+)\s*\|\s*([–\-]?[\d.]+)\s*\|\s*([–\-]?[\d.]+)\s*\|"
+        table_pattern = r"\|\s*[`*]{0,2}(col\w+)[`*]{0,2}\s*\|\s*([\d.]+)\s*\|\s*[\d.]+\s*\|\s*([\d.]+)\s*\|\s*([–\-]?[\d.]+)\s*\|\s*([–\-]?[\d.]+)\s*\|"
         table_matches = list(re.finditer(table_pattern, summary_content, re.MULTILINE))
 
         total_claims = 0
