@@ -11,6 +11,9 @@ This README documents the implemented functionality exactly as found in the
 codebase (no assumptions or guesses). See the referenced files for full
 details.
 
+
+![Description](assets/dashboard.png)
+
 ## 1) Project overview — business problem solved
 
 This project automates exploratory data analysis and lightweight reporting for
