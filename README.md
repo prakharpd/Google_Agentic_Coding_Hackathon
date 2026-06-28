@@ -22,6 +22,7 @@ insights (descriptive statistics, outliers, correlations), visualisations,
 and a polished markdown summary while maintaining a strict security gate to
 prevent prompt-injection or poisoned data from reaching LLMs.
 
+
 ## 2) Full 6-agent pipeline (implemented agents and responsibilities)
 
 - `SecurityValidatorAgent` (`src/agents/security_agent.py`)
@@ -52,6 +53,7 @@ prevent prompt-injection or poisoned data from reaching LLMs.
 
 The orchestrator that runs these agents end-to-end is
 `src/agents/orchestrator.py`.
+
 
 ## 3) Streamlit frontend features (`src/app.py`)
 
