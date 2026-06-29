@@ -54,6 +54,7 @@ prevent prompt-injection or poisoned data from reaching LLMs.
 The orchestrator that runs these agents end-to-end is
 `src/agents/orchestrator.py`.
 
+![Description](assets/analyst_chart.png)
 
 ## 3) Streamlit frontend features (`src/app.py`)
 
